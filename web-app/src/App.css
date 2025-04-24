@@ -1,0 +1,44 @@
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* This makes the thumb visible but keeps it minimal */
+/* Target the scrollbar track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Optional: style the thumb too */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5); /* semi-transparent thumb */
+  border-radius: 10px;
+}
+
+/* Optional: hide scrollbar entirely if needed */
+::-webkit-scrollbar {
+  width: 8px; /* or 0px to hide */
+}
+
+
+
+#about {
+  background: linear-gradient(to bottom, #223E6B, 90%, #fff);
+}
+
+footer {
+  background-color: #223E6B;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
