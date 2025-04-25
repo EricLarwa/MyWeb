@@ -47,5 +47,6 @@
   },
   "devDependencies": {
     "netlify-cli": "^20.0.4"
-  }
+  },
+  "homepage": "."
 }
