@@ -8,8 +8,6 @@
         "distDir": "build"
       }
     }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/" }
   ]
 }
+
