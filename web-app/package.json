@@ -48,5 +48,5 @@
   "devDependencies": {
     "netlify-cli": "^20.0.4"
   },
-  "homepage": "."
+  "homepage": "https://ericlarwa.vercel.app/"
 }
