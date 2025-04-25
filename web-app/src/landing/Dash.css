@@ -33,7 +33,8 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 80px;
+    margin-left: 20px;
 }
 
 .Eric {
@@ -49,7 +50,7 @@
     position: absolute;
     width: 245px;
     height: 265px;
-    top: 35px;
+    top: 105px;
     left: 43%;
     transform: translateX(-50%);
     margin-left: 15px;

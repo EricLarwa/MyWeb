@@ -33,22 +33,24 @@ const Projects = () => {
             });
         };
 
+        const currentImages = imageRefs.current;
+        const currentCards = cardRefs.current;
         const imageObserver = new IntersectionObserver(handleImageIntersect, observerOptions);
         const cardObserver = new IntersectionObserver(handleCardIntersect, observerOptions);
 
-        imageRefs.current.forEach(ref => {
+        currentImages.forEach(ref => {
             if (ref) imageObserver.observe(ref);
         });
 
-        cardRefs.current.forEach(ref => {
+        currentCards.forEach(ref => {
             if (ref) cardObserver.observe(ref);
         });
 
         return () => {
-            imageRefs.current.forEach(ref => {
+            currentImages.forEach(ref => {
                 if (ref) imageObserver.unobserve(ref);
             });
-            cardRefs.current.forEach(ref => {
+            currentCards.forEach(ref => {
                 if (ref) cardObserver.unobserve(ref);
             });
         };
@@ -95,13 +97,13 @@ const Projects = () => {
             
             <div className="projects-container-two" ref={project2Ref}>
                 <div 
-                    className="card-container-two slide-from-left" 
+                    className="card-container-two slide-from-right" 
                     ref={addToImageRefs}
                 >
                     <img src={eCommerce} className="project-image-two" alt="eCommerce Analysis" />
                 </div>
                 <div 
-                    className="card-wrapper-two slide-from-right" 
+                    className="card-wrapper-two slide-from-left" 
                     ref={addToCardRefs}
                 >
                     <p className="label-two">Python, PostgreSQL, MongoDB</p>

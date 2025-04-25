@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Nav } from 'react-bootstrap';
-import { openResume, closeResume } from '../resume/ResumeView';
 import './Navbar.css'; 
 import ResumeViewer from '../resume/ResumeView';
 

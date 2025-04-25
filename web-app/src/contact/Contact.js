@@ -39,13 +39,14 @@ const handleSubmit = async (e) => {
   }
   
   try {
-    const response = await fetch('http://localhost:4000/api/contact', {
+    const response = await fetch('/.netlify/functions/submit-form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
+    
     
     const data = await response.json();
     
