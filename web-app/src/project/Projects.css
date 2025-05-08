@@ -122,10 +122,10 @@ body {
     flex-direction: row;
     margin-left: 200px;
     margin-top: 0px;
+    position: relative;
 }
 
 .project-image-two {
-    margin-left: 260px;
     width: 500px;
     height: 300px;
     border-radius: 1rem;
@@ -133,10 +133,9 @@ body {
 
 .card-container-two {
     border-radius: 1rem;
-    padding: 3rem;
     display: flex;
-    margin-right: -20px;
     justify-content: center;
+    margin-left: 300px;
     color: white;
     flex-shrink: 0;
 }
@@ -145,8 +144,10 @@ body {
     position: relative;
     right: 820px;
     bottom: 30px;
+    margin-left: 40px;
     flex-shrink: 0;
     justify-content: center;
+    z-index:2;
 }
 
 .projects-container-three {

@@ -101,6 +101,7 @@ const Projects = () => {
                     ref={addToImageRefs}
                 >
                     <img src={eCommerce} className="project-image-two" alt="eCommerce Analysis" />
+                    
                 </div>
                 <div 
                     className="card-wrapper-two slide-from-left" 

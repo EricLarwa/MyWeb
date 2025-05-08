@@ -6,6 +6,7 @@ import ResumeViewer from '../resume/ResumeView';
 const NavBar = () => {
     const [navbarDark, setNavbarDark] = useState(true);
     const [isResumeOpen, setIsResumeOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     
     const openResume = () => {
         setIsResumeOpen(true);
@@ -13,6 +14,10 @@ const NavBar = () => {
 
     const closeResume = () => {
         setIsResumeOpen(false);
+    }
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
     }
 
     useEffect(() => {
@@ -42,12 +47,23 @@ const NavBar = () => {
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
+
+        setMobileMenuOpen(false);
     };
 
     return (
         <Nav className={`navbar ${navbarDark ? 'navbar-dark' : 'navbar-light'}`}>
             <h1 className="Brand">Eric Larwa</h1>
-            <ul className="upper">
+
+            <div className="hamburger-menu" onClick={toggleMobileMenu}>
+                <div className={`hamburger-icon ${mobileMenuOpen ? 'open' : ''}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <ul className={`upper ${mobileMenuOpen ? 'show-mobile-menu' : ''}`}>
                 <li className="nav-li" onClick={() => scrollToSection('about')}>About</li>
                 <li className="nav-li" onClick={() => scrollToSection('experience')}>Experience</li>
                 <li className="nav-li" onClick={() => scrollToSection('contact')}>Contact</li>
